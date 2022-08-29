@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Grocery Management</title>
+		<link rel = "stylesheet" href = "../Task 1 javascript/local_style.css">
+		
+		
+	</head>
+	
+	<body>
+		<h2>Grocery Management</h2>
+		
+		<div class = "container">
+			<form id = "formData" autocomplete="off">
+				<div class = "lableName">
+					<label for = "itemNo">Item No.:</label>
+					<input type = "number" class = "center" id = "inputNumber" min = "1" onblur = "validateField('inputNumber','numberErr','Item No.:');">
+				</div>
+				<span id = "numberErr"></span>
+				<!--<div class = "err">*Must fill item No.</div>-->
+				
+				<div class = "lableName">
+					<label for = "itemName">Item Name:</label>
+					<input type = "text" class = "center" id = "inputName" onblur = "validateField('inputName','nameErr','Item Name:');">
+				</div>
+				<span id = "nameErr"></span>
+				<!--<div class = "err">*Must fill item No.</div>-->
+				
+				<div class = "lableName">
+					<label for = "proDate">Purchase Date:</label>
+					<input type = "date" class = "center" id = "inputDate" onblur = "validateField('inputDate','dateErr','Purchase Date:');">
+				</div>
+				<span id = "dateErr"></span>
+				<!--<div class = "err">*Must fill item No.</div>-->
+				
+				<div class = "lableName">
+					<label for = "quanitity">Quantity:</label>
+					<select type = "option" class = "center" id = "selectData" onblur = "validateField('selectData','quaErr','Quantity:');"> >  
+						<option disabled selected value="">Select Quantity</option>
+						<option type = "1">1</option>
+						<option type = "2">2</option>
+						<option type = "3">3</option>
+						<option type = "4">4</option>
+						<option type = "5">5</option>
+						<option type = "6">6</option>
+					</select>
+				</div>
+				<span id = "quaErr"></span>
+				<!--<div class = "err">*Must fill item No.</div>-->
+				
+				<div id = "btn">
+					<button type = "button" class = "button" id = "saveButton" onclick ="addRow()">Save</button>
+					<button type = "reset" class = "button" id = "resetButton" onclick = "resetData()">Reset</button>
+				</div>
+			</form>
+		</div>
+		
+		<div class = "table">
+			<table id = "tableData">
+				<thead>
+					<tr>
+						<th>Item No.</th>
+						<th>Item Name</th>
+						<th>Purchase Date</th>
+						<th>Quantity</th>
+						<th>Action</th>
+					</tr>
+				</thead>
+				<tbody>
+				
+				</tbody>
+			</table>
+		</div>
+		<script src = "../Task 1 javascript/local_grocerymgnt.js"></script>
+	</body>
+	
+</html>
